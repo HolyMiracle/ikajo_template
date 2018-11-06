@@ -94,7 +94,8 @@ header {
         flex-direction: row;
         flex-wrap: nowrap;
         padding: 1.5rem 0;
-        & img { 
+        & img {
+            align-self: center;
             width: 100px;
             height: 59px;
         }
@@ -340,5 +341,123 @@ header {
 
     .wrapper {
         width: 768px;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+
+    .wrapper {
+        width: 550px;
+    }
+
+    .h1 {
+        line-height: 5.8rem;
+    }
+
+    header {
+        & nav {
+            & img {
+                align-self: center;
+                width: 50px;
+                height: 29px;
+            }
+        }
+    }
+
+    .services {
+        &__flex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+    }
+
+    .contact {
+        &__flex {
+            flex-direction: column;
+            &-map {
+                flex: 1 1 100%;
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+            & form {
+                
+                flex: 1 1 100%;
+                padding-left: 0;
+                & .btn {
+                    float: auto;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__content {
+            & ul {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 567px) {
+    html {
+        font-size: 7px;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .h1 {
+        line-height: 5.8rem;
+    }
+
+    header {
+        height: auto;
+        & nav {
+            & img {
+                align-self: center;
+                width: 50px;
+                height: 29px;
+            }
+        }
+    }
+
+    .services {
+        &__flex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+    }
+
+    .contact {
+        &__flex {
+            flex-direction: column;
+            &-map {
+                flex: 1 1 100%;
+                padding-right: 0;
+                padding-bottom: 30px;
+            }
+            & form {
+                
+                flex: 1 1 100%;
+                padding-left: 0;
+                & .btn {
+                    float: auto;
+                }
+            }
+        }
+    }
+    .footer {
+        &__content {
+            & ul {
+                flex-wrap: wrap;
+            }
+        }
     }
 }
