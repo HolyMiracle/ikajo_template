@@ -1,4 +1,4 @@
-//SMOOTH SCROLL SCTIPT
+//SMOOTH SCROLL SCRIPT
 
 (function($, window, document) {
 
@@ -121,26 +121,26 @@ function formSender() {
             isValid = isValid && !isEmpty;
 
             if (isEmpty) {
-                console.log(inputs.className);
-                inputs.className += ' error';
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
             }
         });
 
-        Array.prototype.forEach.call(inputs, function(inputs) {
-            var pattern = inputs.getAttribute('pattern');
+        Array.prototype.forEach.call(inputs, function(field) {
+            var pattern = field.getAttribute('pattern');
 
             if (pattern) {
                 var reg = new RegExp(pattern);
 
-                if (reg.test(inputs.value)) {
+                if (reg.test(field.value)) {
                     return;
                 } else {
                     isValid = isValid && false;
-                    inputs.className += ' error';
+                    field.classList.add('error');
                 }
             }
         })
-
 
         if (isValid) {
             form.style.display = "none";

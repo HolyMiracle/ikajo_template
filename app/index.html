@@ -120,7 +120,7 @@
                     </div>
                     <form class="contact__flex-form js-form-sender" action="" method="POST" id="form">
                         <input class="js-required" placeholder="Name" type="text" name="name" id="" required>
-                        <input class="js-required" placeholder="Email" type="email" name="email" id="" required pattern="email">
+                        <input class="js-required" placeholder="Email" type="email" name="email" id="" required pattern="^[a-z0-9](\.?[a-z0-9_-]){0,}@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$">
                         <textarea placeholder="Message" name="message" id="" cols="30" rows="6"></textarea>
                         <button type="submit" class="btn">send</button>
                     </form>

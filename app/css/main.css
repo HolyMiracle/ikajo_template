@@ -105,9 +105,12 @@ a {
   transform: translateY(-100%); }
 
 .success-message {
-  display: none; }
+  display: none;
+  flex: 1 1 50%;
+  justify-self: center;
+  align-self: center; }
   .success-message img {
-    width: 100%; }
+    width: 50%; }
 
 .title {
   color: #354a9e;

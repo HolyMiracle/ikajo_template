@@ -86,8 +86,11 @@ a {
 
 .success-message {
     display: none;
+    flex: 1 1 50%;
+    justify-self: center;
+    align-self: center;
     & img {
-        width: 100%;
+        width: 50%;
     }    
 }
 
