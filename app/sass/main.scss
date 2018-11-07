@@ -85,11 +85,20 @@ a {
 
 
 .success-message {
+    color: #354a9e;
+    text-align: center;
     display: none;
     flex: 1 1 50%;
     justify-self: center;
     align-self: center;
+    & span {
+        text-transform: uppercase;
+    }
+    & p {
+        margin-top: 3.5rem;
+    }
     & img {
+        margin-bottom: 5rem;
         width: 50%;
     }    
 }

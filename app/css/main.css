@@ -105,11 +105,18 @@ a {
   transform: translateY(-100%); }
 
 .success-message {
+  color: #354a9e;
+  text-align: center;
   display: none;
   flex: 1 1 50%;
   justify-self: center;
   align-self: center; }
+  .success-message span {
+    text-transform: uppercase; }
+  .success-message p {
+    margin-top: 3.5rem; }
   .success-message img {
+    margin-bottom: 5rem;
     width: 50%; }
 
 .title {
