@@ -82,11 +82,7 @@ a {
     transform: translateY(-100%);
 }
 
-.error {
-    outline: none;
-    border: 1px solid #c61304;
-    border-radius: 5px;
-}
+
 
 .success-message {
     display: none;
@@ -289,6 +285,11 @@ header {
             box-sizing: border-box;
             flex: 1 1 50%;
             padding-left: 1.5rem;
+            & .error {
+                outline: none;
+                border: 1px solid #c61304;
+                border-radius: 5px;
+            }
             & input {
                 font-size: 14px;
                 font-weight: 400;
@@ -531,7 +532,6 @@ header {
                 padding-bottom: 30px;
             }
             & form {
-                
                 flex: 1 1 100%;
                 padding-left: 0;
                 & .btn {

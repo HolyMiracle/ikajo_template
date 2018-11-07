@@ -1,4 +1,4 @@
-//Smooth scroll script
+//SMOOTH SCROLL SCTIPT
 
 (function($, window, document) {
 
@@ -35,7 +35,7 @@
    
 }(window.jQuery, window, document));
 
-//Header show-hide script
+//HEADER SHOW-HIDE SCRIPT
 
 function resize() {
     if($(window).width() > 768) {
@@ -55,7 +55,7 @@ $(window).resize(function() {
     resize();
     });
 
-//Modal window script
+//MODAL WINDOW SCRIPT
 
 modalWindow();
 
@@ -84,64 +84,68 @@ function modalWindow() {
     window.addEventListener("click", windowOnClick);
 }
 
-//Form validate script
+//FORM VALIDATE SCRIPT
 
-// formSender();
+formSender();
 
-// function formSender() {
-// 		// javascript selector
-//     var form = document.querySelector('#form');
+function formSender() {
+		// javascript selector
+    var form = document.querySelector('#form');
     
-//     // jquery selector
-//     // $ sign in variable is a good practise
-//     var $form = $('#form');
+    // jquery selector
+    // $ sign in variable is a good practise
+    // var $form = $('#form');
     
-//     // check differents
-//     console.log('form JAVASCRIPT:', form);
-//     console.log('form jQuery:', $form);
+    // check differents
+    console.log('form JAVASCRIPT:', form);
+    // console.log('form jQuery:', $form);
 
-//     form.setAttribute('novalidate', '');
+    form.setAttribute('novalidate', '');
 
-//     form.addEventListener('submit', function (e) {
-//         e.preventDefault();
-//     });
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        validate();
+    });
 
-//     function validate() {
-//         var isValid = true;
-//         var isEmpty;
-//         var requiredFields = document.querySelectorAll('.js-required');
-//         var inputs = document.querySelectorAll('input');
-//         var onSuccess = document.querySelector('.success-message');
+    
+
+    function validate() {
+        var isValid = true;
+        var isEmpty;
+        var requiredFields = document.querySelectorAll('.js-required');
+        var inputs = document.querySelectorAll('input');
+        var onSuccess = document.querySelector('.success-message');
         
-//         Array.prototype.forEach.call(requiredFields, function (field) {
-//             isEmpty = !field.value.trim();
-//             isValid = isValid && !isEmpty;
+        Array.prototype.forEach.call(requiredFields, function (field) {
+            isEmpty = !field.value.trim();
+            isValid = isValid && !isEmpty;
 
-//             if (isEmpty) {
-//                 inputs.classList.add('error');
-//             }
-//         });
+            if (isEmpty) {
+                console.log(inputs.className);
+                inputs.className += ' error';
+            }
+        });
 
-//         Array.prototype.forEach.call(inputs, function(inputs) {
-//             var pattern = inputs.getAttribute('pattern');
+        Array.prototype.forEach.call(inputs, function(inputs) {
+            var pattern = inputs.getAttribute('pattern');
 
-//             if (pattern) {
-//                 var reg = new RegExp(pattern);
+            if (pattern) {
+                var reg = new RegExp(pattern);
 
-//                 if (reg.test(inputs.value)) {
-//                     return;
-//                 } else {
-//                     isValid = isValid && false;
-//                     inputs.classList.add('error');
-//                 }
-//             }
-//         })
+                if (reg.test(inputs.value)) {
+                    return;
+                } else {
+                    isValid = isValid && false;
+                    inputs.className += ' error';
+                }
+            }
+        })
 
 
-//         if (isValid) {
-//             form.style.display = "none";
-//             onSuccess.style.display = "block";
-//         }
-//     }
+        if (isValid) {
+            form.style.display = "none";
+            onSuccess.style.display = "block";
+        }
+    }
 
-// }
+}

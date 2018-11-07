@@ -104,11 +104,6 @@ a {
 .active {
   transform: translateY(-100%); }
 
-.error {
-  outline: none;
-  border: 1px solid #c61304;
-  border-radius: 5px; }
-
 .success-message {
   display: none; }
   .success-message img {
@@ -277,6 +272,10 @@ header {
       box-sizing: border-box;
       flex: 1 1 50%;
       padding-left: 1.5rem; }
+      .contact__flex form .error {
+        outline: none;
+        border: 1px solid #c61304;
+        border-radius: 5px; }
       .contact__flex form input {
         font-size: 14px;
         font-weight: 400;
