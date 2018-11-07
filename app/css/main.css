@@ -58,6 +58,36 @@ a {
 .h1 {
   margin-bottom: 4rem; }
 
+.modal {
+  text-align: center;
+  position: relative;
+  top: 0;
+  z-index: 4;
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  height: 50vh;
+  transition: all .5s 2s;
+  background-color: black; }
+  .modal ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+    .modal ul li {
+      padding: 2rem 0; }
+    .modal ul li a {
+      font-size: 3rem;
+      color: #fff; }
+
+.show-modal {
+  display: block;
+  visibility: visible;
+  transition: all .5s 2s; }
+
 .link {
   position: relative; }
   .link::before {
@@ -136,6 +166,10 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 1.5rem 0; }
+    header nav .burger-icon {
+      display: none;
+      font-size: 3rem;
+      cursor: pointer; }
     header nav img {
       align-self: center;
       width: 100px;
@@ -386,6 +420,10 @@ header {
     line-height: 5.8rem; }
   header {
     height: auto; }
+    header nav .burger-icon {
+      display: block; }
+    header nav ul {
+      display: none; }
     header nav img {
       align-self: center;
       width: 50px;
@@ -406,7 +444,10 @@ header {
       .contact__flex form .btn {
         float: auto; }
   .footer__content ul {
-    flex-wrap: wrap; } }
+    font-size: 2rem;
+    flex-wrap: wrap; }
+    .footer__content ul li {
+      padding-bottom: 1.5rem; } }
 
 @media (min-width: 320px) and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .services__flex {
