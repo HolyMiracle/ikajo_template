@@ -71,6 +71,19 @@ a {
   .link:hover::before {
     visibility: visible; }
 
+.active {
+  transform: translateY(-100%); }
+
+.error {
+  outline: none;
+  border: 1px solid #c61304;
+  border-radius: 5px; }
+
+.success-message {
+  display: none; }
+  .success-message img {
+    width: 100%; }
+
 .title {
   color: #354a9e;
   text-transform: uppercase;
@@ -109,8 +122,12 @@ a {
   margin: 0 auto; }
 
 header {
+  background-color: #fff;
+  position: fixed;
   width: 100%;
-  height: 9rem; }
+  height: 9rem;
+  z-index: 5;
+  transition: all .5s; }
   header nav {
     box-sizing: border-box;
     width: 100%;
@@ -133,12 +150,14 @@ header {
           color: #8a8a8a; }
 
 .main {
+  padding-top: 9rem;
   width: 100%;
   background-image: url(../img/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .main__content {
     padding: 22rem 0 29rem 0;
     text-align: left;
@@ -225,6 +244,9 @@ header {
       flex: 1 1 50%;
       padding-left: 1.5rem; }
       .contact__flex form input {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
         font-family: 'Montserrat', sans-serif;
         padding: 15px 30px;
         margin-bottom: 1.5rem;
@@ -238,6 +260,10 @@ header {
           font-size: 14px;
           font-weight: 400;
           line-height: 24px; }
+        .contact__flex form input:focus {
+          outline: none;
+          border: 1px solid #728eff;
+          border-radius: 5px; }
       .contact__flex form textarea {
         font-family: 'Montserrat', sans-serif;
         resize: none;
@@ -249,13 +275,18 @@ header {
         border-radius: 5px;
         background-color: #fff;
         font-size: 14px;
-        font-weight: 400; }
+        font-weight: 400;
+        line-height: 24px; }
         .contact__flex form textarea::placeholder {
           font-family: 'Montserrat', sans-serif;
           color: #a9a9a9;
           font-size: 14px;
           font-weight: 400;
           line-height: 24px; }
+        .contact__flex form textarea:focus {
+          outline: none;
+          border: 1px solid #728eff;
+          border-radius: 5px; }
       .contact__flex form .btn {
         cursor: pointer;
         border-style: none;
@@ -376,3 +407,11 @@ header {
         float: auto; }
   .footer__content ul {
     flex-wrap: wrap; } }
+
+@media (min-width: 320px) and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .services__flex {
+    display: flex;
+    flex-wrap: wrap; }
+    .services__flex-item {
+      flex: 1 1 50%;
+      margin-bottom: 20px; } }

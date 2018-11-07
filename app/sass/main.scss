@@ -39,6 +39,23 @@ a {
     }
 }
 
+.active {
+    transform: translateY(-100%);
+}
+
+.error {
+    outline: none;
+    border: 1px solid #c61304;
+    border-radius: 5px;
+}
+
+.success-message {
+    display: none;
+    & img {
+        width: 100%;
+    }    
+}
+
 .title {
     color: #354a9e;
     text-transform: uppercase;
@@ -84,8 +101,12 @@ a {
 }
 
 header {
+    background-color: #fff;
+    position: fixed;
     width: 100%;
     height: 9rem;
+    z-index: 5;
+    transition: all .5s;
     & nav {
         box-sizing: border-box;
         width: 100%;
@@ -114,12 +135,14 @@ header {
 }
 
 .main {
+    padding-top: 9rem;
     width: 100%;
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
     &__content {
         padding: 22rem 0 29rem 0;
         text-align: left;
@@ -223,6 +246,9 @@ header {
             flex: 1 1 50%;
             padding-left: 1.5rem;
             & input {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
                 font-family: 'Montserrat', sans-serif;
                 padding: 15px 30px;
                 margin-bottom: 1.5rem;
@@ -237,6 +263,11 @@ header {
                     font-weight: 400;
                     line-height: 24px;
                 }
+                &:focus {
+                    outline: none;
+                    border: 1px solid #728eff;
+                    border-radius: 5px;
+                }
             }
             & textarea {
                 font-family: 'Montserrat', sans-serif;
@@ -250,6 +281,7 @@ header {
                 background-color: #fff;
                 font-size: 14px;
                 font-weight: 400;
+                line-height: 24px;
                 
                 &::placeholder {
                     font-family: 'Montserrat', sans-serif;
@@ -257,6 +289,11 @@ header {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 24px;
+                }
+                &:focus {
+                    outline: none;
+                    border: 1px solid #728eff;
+                    border-radius: 5px;
                 }
             }
             & .btn {
@@ -353,7 +390,7 @@ header {
         width: 550px;
     }
 
-    .h1 {
+    .h1 {   
         line-height: 5.8rem;
     }
 
@@ -457,6 +494,19 @@ header {
         &__content {
             & ul {
                 flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .services {
+        &__flex {
+            display: flex;
+            flex-wrap: wrap;
+            &-item {
+                flex: 1 1 50%;
+                margin-bottom: 20px;
             }
         }
     }
