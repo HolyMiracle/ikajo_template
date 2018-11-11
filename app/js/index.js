@@ -89,17 +89,8 @@ function modalWindow() {
 formSender();
 
 function formSender() {
-		// javascript selector
     var form = document.querySelector('#form');
     
-    // jquery selector
-    // $ sign in variable is a good practise
-    // var $form = $('#form');
-    
-    // check differents
-    console.log('form JAVASCRIPT:', form);
-    // console.log('form jQuery:', $form);
-
     form.setAttribute('novalidate', '');
 
     form.addEventListener('submit', function (e) {
